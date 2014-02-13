@@ -41,10 +41,11 @@ function addProject(result) {
 	var details = $("#project" + ID).find(".details");
 
 	//$(details).html("HELLO?!");
-	var projectHTML = '<a href="#" class="thumbnail">' + '<img src="' + result.image + '" class="detailsImage">' + '<p>' + result.title + '</p>' + '<p><small>' + result.date + '</small></p><div class="details">' + result.summary + '</div></a>';
+	var projectHTML = '<a href="#" class="thumbnail">' + '<img src="' + result.image + '" class="detailsImage">' + '<p>' + result.title + '</p>' + '<p><small>' + result.date + '</small></p><div class="details"></div></a>';
 
 	$("#project" + ID).html(projectHTML);
-	//$(details).html(result.summary);
+	var details = $("#project" + ID).find(".details");
+	$(details).html(result.summary);
 
 }
 
